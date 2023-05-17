@@ -6,40 +6,44 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	        Scanner scanner = new Scanner(System.in);
-	        ArrayList <String> estudiantes = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
 
-	        // Pedir los datos del estudiante
-	        System.out.println("Registro de Estudiantes");
-	        System.out.println("----------------------");
+        // Pedir los datos del estudiante
+        System.out.println("Registro de Estudiantes");
+        System.out.println("----------------------");
 
-	        System.out.print("Nombre: ");
-	        estudiantes.add(scanner.nextLine());
+        Estudiante estudiante = new Estudiante();
 
-	        System.out.print("Apellidos: ");
-	        estudiantes.add(scanner.nextLine());
+        System.out.print("Nombre: ");
+        estudiante.setNombre(scanner.nextLine());
 
-	        System.out.print("Fecha de nacimiento: ");
-	        estudiantes.add(scanner.nextLine());
+        System.out.print("Apellidos: ");
+        estudiante.setApellidos(scanner.nextLine());
 
-	        System.out.print("DNI: ");
-	        estudiantes.add(scanner.nextLine());
+        System.out.print("Fecha de nacimiento: ");
+        estudiante.setFechaNacimiento(scanner.nextLine());
 
-	        System.out.print("Estudios previos: ");
-	        estudiantes.add(scanner.nextLine());
+        System.out.print("DNI: ");
+        estudiante.setDni(scanner.nextLine());
 
-	        System.out.print("Teléfono: ");
-	        estudiantes.add(scanner.nextLine());
+        System.out.print("Estudios previos: ");
+        estudiante.setEstudiosPrevios(scanner.nextLine());
 
-	        // Imprimir los datos del estudiante
-	        System.out.println("\nDatos del Estudiante");
-	        System.out.println("--------------------");
-	        System.out.println("Nombre: " + estudiantes.get(0));
-	        System.out.println("Apellidos: " + estudiantes.get(1));
-	        System.out.println("Fecha de nacimiento: " + estudiantes.get(2));
-	        System.out.println("DNI: " + estudiantes.get(3));
-	        System.out.println("Estudios previos: " + estudiantes.get(4));
-	        System.out.println("Teléfono: " + estudiantes.get(5));
-	}
+        System.out.print("Teléfono: ");
+        estudiante.setTelefono(scanner.nextLine());
 
+        estudiantes.add(estudiante);
+
+        // Imprimir los datos del estudiante
+        System.out.println("\nDatos del Estudiante");
+        System.out.println("--------------------");
+        Estudiante estudianteRegistrado = estudiantes.get(0);
+        System.out.println("Nombre: " + estudianteRegistrado.getNombre());
+        System.out.println("Apellidos: " + estudianteRegistrado.getApellidos());
+        System.out.println("Fecha de nacimiento: " + estudianteRegistrado.getFechaNacimiento());
+        System.out.println("DNI: " + estudianteRegistrado.getDni());
+        System.out.println("Estudios previos: " + estudianteRegistrado.getEstudiosPrevios());
+        System.out.println("Teléfono: " + estudianteRegistrado.getTelefono());
+    }
 }
